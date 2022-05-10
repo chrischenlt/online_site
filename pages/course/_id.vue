@@ -159,7 +159,7 @@
                             <ol class="lh-menu-ol" style="display: block;">
                               <li v-for="video in chapter.children" :key="video.id" class="lh-menu-second ml30">
                                 <a
-                                  v-if="isBuy || course.price === 0"
+                                  v-if="isBuy && video.videoSourceId !== null || course.price === 0"
                                   :href="'/player/'+video.videoSourceId"
                                   :title="video.title"
                                   target="_blank">
